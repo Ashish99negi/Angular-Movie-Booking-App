@@ -1,0 +1,67 @@
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  flex-wrap: wrap;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.rounded-input {
+  border-radius: 20px;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  width: 40%;
+}
+
+.login-btn {
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #303f9f;
+}
+
+.fancy-title {
+  font-family: "Brush Script MT", cursive;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff4081;
+  cursor: pointer;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .rounded-input {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .fancy-title {
+    text-align: center;
+    width: 100%;
+  }
+
+  .login-btn {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .spacer {
+    display: none;
+  }
+}

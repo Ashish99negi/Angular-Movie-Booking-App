@@ -1,0 +1,24 @@
+<div class="seat-selection-container">
+  <h2>Select Your Seats</h2>
+  <div class="screen">Screen</div>
+  <div class="seats">
+    <div
+      class="seat"
+      *ngFor="let seat of seats"
+      [ngClass]="{
+        'seat-available': seat.status === 'available',
+        'seat-booked': seat.status === 'booked',
+        'seat-selected': seat.status === 'selected'
+      }"
+      (click)="selectSeat(seat)"
+    >
+      {{ seat.label }}
+    </div>
+  </div>
+  <div class="summary">
+    <h3>Summary</h3>
+    <p>Selected Seats: {{ selectedSeats.length }}</p>
+    <p>Total Price: {{ totalPrice | currency }}</p>
+    <button mat-button (click)="bookSeats()">Book Now</button>
+  </div>
+</div>

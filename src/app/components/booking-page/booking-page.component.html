@@ -1,0 +1,41 @@
+<div class="booking-container" *ngIf="movie">
+  <mat-card class="poster-card">
+    <img
+      class="movie-poster"
+      mat-card-image
+      [src]="movie.Poster"
+      alt="{{ movie.Title }}"
+    />
+  </mat-card>
+  <mat-card class="details-card">
+    <h2>{{ movie.Title }}</h2>
+    <div class="date-buttons">
+      <button mat-button class="date-button" (click)="dateChange(today)">
+        <div class="date-part">{{ today | date : "MMM" }}</div>
+        <div class="date-part">{{ today | date : "dd" }}</div>
+      </button>
+      <button mat-button class="date-button" (click)="dateChange(tomorrow)">
+        <div class="date-part">{{ tomorrow | date : "MMM" }}</div>
+        <div class="date-part">{{ tomorrow | date : "dd" }}</div>
+      </button>
+      <button
+        mat-button
+        class="date-button"
+        (click)="dateChange(dayAfterTomorrow)"
+      >
+        <div class="date-part">{{ dayAfterTomorrow | date : "MMM" }}</div>
+        <div class="date-part">{{ dayAfterTomorrow | date : "dd" }}</div>
+      </button>
+    </div>
+    <div class="time-slots" *ngIf="availableTimes.length">
+      <h4>Available Times</h4>
+      <button
+        mat-button
+        *ngFor="let time of availableTimes"
+        (click)="selectTime(time)"
+      >
+        {{ time }}
+      </button>
+    </div>
+  </mat-card>
+</div>

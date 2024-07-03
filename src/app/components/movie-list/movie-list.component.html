@@ -1,0 +1,14 @@
+<div class="movies-container">
+  <mat-card *ngFor="let movie of movies">
+    <img
+      class="movie-poster"
+      mat-card-image
+      [src]="movie.Poster"
+      alt="{{ movie.Title }}"
+    />
+    <mat-card-content>
+      <h4>{{ movie.Title }}</h4>
+      <button (click)="bookTickets(movie)">Book Tickets</button>
+    </mat-card-content>
+  </mat-card>
+</div>

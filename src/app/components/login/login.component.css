@@ -1,0 +1,15 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+mat-card {
+  width: 300px;
+  border: 2px solid;
+}
+
+button {
+  justify-content: center;
+  align-items: center;
+}
