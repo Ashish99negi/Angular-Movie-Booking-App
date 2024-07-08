@@ -29,7 +29,7 @@ export class MovieListComponent implements OnInit {
 
   getMoviesData() {
     this.movies = []; // Reset movies list
-    for (let page = 1; page <= 5; page++) {
+    for (let page = 1; page <= 1; page++) {
       this.movieListService.fetchMovies(page).subscribe(
         (data) => {
           if (data.Search) {

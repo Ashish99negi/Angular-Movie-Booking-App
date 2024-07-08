@@ -14,17 +14,19 @@
 
 .seats {
   display: grid;
+  width: 50%;
   grid-template-columns: repeat(10, 1fr);
   gap: 10px;
   justify-content: center;
-  margin: 20px 0;
+  align-items: center;
+  margin: 20px 25%;
 }
 
 .seat {
   border: 1px solid #ccc;
   border-radius: 4px;
   cursor: pointer;
-  height: 40px;
+  height: 30px;
   line-height: 40px;
   text-align: center;
   transition: background-color 0.3s;
@@ -45,4 +47,5 @@
 
 .summary {
   margin-top: 20px;
+  color: aliceblue;
 }
